@@ -1,0 +1,6 @@
+{
+  "error": {
+    "addressNotFound": "Address not found",
+    "markerNotFound": "Marker not found"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "error": {
+    "addressNotFound": "Адрес не найден",
+    "markerNotFound": "Маркер не найден"
+  }
+}

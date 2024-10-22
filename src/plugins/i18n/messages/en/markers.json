@@ -1,0 +1,11 @@
+{
+  "title": "Markers:",
+  "empty": "No markers",
+  "markerTitle": "Marker № {0}",
+  "removeDialog": {
+    "title": "Delete marker",
+    "message": "Are you sure you want to delete marker?",
+    "confirm": "Delete",
+    "cancel": "Cancel"
+  }
+}
