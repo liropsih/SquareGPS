@@ -1,7 +1,7 @@
 import type { LatLng } from "leaflet";
 import { v4 as uuidv4 } from "uuid";
 import { getAddress } from "./Geocode";
-import { getLocalizedText } from "@/plugins/i18n";
+import i18n from "@/plugins/i18n";
 
 export interface Marker {
   id: string;
@@ -33,7 +33,7 @@ class Backend {
     try {
       const address = await getAddress(marker.latitude, marker.longitude);
       if (!address || typeof address !== "string") {
-        throw new Error(getLocalizedText("backend.error.addressNotFound"));
+        throw new Error(i18n.global.t("backend.error.addressNotFound"));
       }
       const id = uuidv4();
       const markerItem = { id, address, ...marker };
@@ -49,7 +49,7 @@ class Backend {
     try {
       const address = await getAddress(marker.latitude, marker.longitude);
       if (!address || typeof address !== "string") {
-        throw new Error(getLocalizedText("backend.error.addressNotFound"));
+        throw new Error(i18n.global.t("backend.error.addressNotFound"));
       }
       const markerItem = { address, ...marker };
       const markers = await this.getMarkers();
@@ -57,7 +57,7 @@ class Backend {
       if (index !== -1) {
         markers[index] = markerItem;
       } else {
-        throw new Error(getLocalizedText("backend.error.markerNotFound"));
+        throw new Error(i18n.global.t("backend.error.markerNotFound"));
       }
       await this.saveMarkers(markers);
       return markerItem;
@@ -72,7 +72,7 @@ class Backend {
       markers.splice(index, 1);
       await this.saveMarkers(markers);
     } else {
-      throw new Error(getLocalizedText("backend.error.markerNotFound"));
+      throw new Error(i18n.global.t("backend.error.markerNotFound"));
     }
   }
 }

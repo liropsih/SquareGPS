@@ -10,6 +10,4 @@ const i18n = createI18n({
   messages,
 });
 
-export const getLocalizedText = (key: string) => i18n.global.t(key);
-
 export default i18n;

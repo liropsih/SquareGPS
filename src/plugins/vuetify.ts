@@ -7,7 +7,7 @@ import { aliases, mdi } from "vuetify/iconsets/mdi";
 import { ru, en } from "vuetify/locale";
 import { defaultLocale, fallbackLocale } from "./i18n";
 
-export const vuetify = createVuetify({
+const vuetify = createVuetify({
   components,
   directives,
   icons: {
@@ -23,3 +23,5 @@ export const vuetify = createVuetify({
     messages: { ru, en },
   },
 });
+
+export default vuetify;

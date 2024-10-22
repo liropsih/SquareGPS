@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import i18n from "./plugins/i18n";
 import router from "./router";
 import store from "./store";
-import { vuetify } from "./plugins/vuetify";
+import vuetify from "./plugins/vuetify";
 import App from "./App.vue";
 import "vuetify-sonner/style.css";
 import "leaflet/dist/leaflet.css";
