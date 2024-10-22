@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"test && build-only {@}\" --",
+    "build": "run-p type-check test-run \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "test": "vitest"
+    "test": "vitest",
+    "test-run": "vitest --run"
   },
   "dependencies": {
     "@vue-leaflet/vue-leaflet": "^0.10.1",
